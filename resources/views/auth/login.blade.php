@@ -8,7 +8,7 @@
     <meta name="viewport"
           content="width=device-width, initial-scale=1.0">
 
-    <title>Login - AbsenSis</title>
+    <title>Login - Absensi Siswa</title>
 
     <link rel="stylesheet"
           href="{{ asset('adminlte/css/adminlte.min.css') }}">
@@ -29,7 +29,7 @@
                 <a href="#"
                    class="h1">
 
-                    <b>AbsenSis</b>
+                    <b>Absensi</b>Siswa
 
                 </a>
 
