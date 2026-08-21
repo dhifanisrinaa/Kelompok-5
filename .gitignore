@@ -25,3 +25,11 @@ _ide_helper.php
 Homestead.json
 Homestead.yaml
 Thumbs.db
+/database/migrations/2026_08_21_060001_create_profile_table.php
+/database/migrations/2026_08_21_062225_create_user_table.php
+/database/migrations/2026_08_21_062238_create_role_table.php
+/database/migrations/2026_08_21_062246_create_film_table.php
+/database/migrations/2026_08_21_062255_create_peran_table.php
+/database/migrations/2026_08_21_062305_create_cast_table.php
+/database/migrations/2026_08_21_062320_create_genre_table.php
+/database/migrations/2026_08_21_062331_create_kritik_table.php
