@@ -11,14 +11,10 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('peran', function (Blueprint $table) {
+        Schema::create('attendance_statuses', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('film_id')
-            ->constrained('film')
-            ->onDelete('cascade');
-            $table->foreignId('cast_id')
-            ->constrained('cast')
-            ->onDelete('cascade');
+            $table->string('name');
+            $table->string('color');
             $table->timestamps();
         });
     }
@@ -28,6 +24,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('peran');
+        Schema::dropIfExists('attendance_statuses');
     }
 };

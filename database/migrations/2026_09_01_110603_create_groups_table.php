@@ -11,15 +11,11 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('film', function (Blueprint $table) {
+        Schema::create('groups', function (Blueprint $table) {
             $table->id();
-            $table->string('judul', 45);
-            $table->text('ringkasan');
-            $table->integer('tahun');
-            $table->string('poster', 45);
-            $table->foreignId('gendre_id')
-            ->constrained('gendre')
-            ->onDelete('cascade');
+            $table->string('name');
+            $table->string('class');
+            $table->string('major');
             $table->timestamps();
         });
     }
@@ -29,6 +25,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('film');
+        Schema::dropIfExists('groups');
     }
 };
