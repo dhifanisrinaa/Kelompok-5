@@ -116,10 +116,10 @@
 
             <div class="col-md-6">
 
-                <strong>Kelompok</strong>
+                <strong>Nama</strong>
 
                 <p>
-                    Kelompok 5
+                    Dhifa Nisrina Arij
                 </p>
 
             </div>

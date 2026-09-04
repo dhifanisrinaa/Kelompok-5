@@ -29,7 +29,7 @@
                 <a href="#"
                    class="h1">
 
-                    <b>Absensi</b>Siswa
+                    <b>Absen</b>Sis
 
                 </a>
 
@@ -46,15 +46,16 @@
                 <form action="{{ route('dashboard') }}"
                       method="GET">
 
-                    <!-- NISN -->
+                    <!-- NIS -->
                     <div class="input-group mb-3">
 
                         <input
                             type="text"
-                            name="nisn"
-                            class="form-control"
-                            placeholder="NISN"
-                            required>
+                            name="nis"
+                            placeholder="NIS"
+                            maxlength="6"
+                            required
+                        >
 
                         <div class="input-group-text">
 
