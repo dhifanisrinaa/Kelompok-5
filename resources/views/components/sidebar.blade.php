@@ -48,50 +48,49 @@
 
 
                 {{-- KEHADIRAN --}}
-                <li class="nav-item mb-1">
+                <li class="nav-item {{ request()->routeIs('statistik', 'kalender') ? 'menu-open' : '' }}">
 
-                    <a href="#kehadiranSubmenu"
-                        class="nav-link text-white d-flex align-items-center justify-content-between"
-                        data-bs-toggle="collapse"
-                        role="button"
-                        aria-expanded="false"
-                        aria-controls="kehadiranSubmenu">
+                    <a href="#"
+                        class="nav-link {{ request()->routeIs('statistik', 'kalender') ? 'active' : '' }}"
+                        data-lte-toggle="treeview">
 
-                        {{-- Icon + Text --}}
-                        <span class="d-flex align-items-center">
-                            <i class="fas fa-calendar-check nav-icon me-2"></i>
-                            <span>Kehadiran</span>
-                        </span>
+                        <i class="nav-icon fas fa-calendar-check"></i>
 
-                        {{-- Arrow --}}
-                        <i class="fas fa-chevron-right kehadiran-arrow"></i>
+                        <p>
+                            Kehadiran
+                            <i class="nav-arrow bi bi-chevron-right"></i>
+                        </p>
 
                     </a>
 
                     {{-- SUBMENU --}}
-                    <div class="collapse" id="kehadiranSubmenu">
+                    <ul class="nav nav-treeview">
 
-                        <ul class="nav flex-column ms-2 mt-1">
+                        {{-- STATISTIK --}}
+                        <li class="nav-item">
+                            <a href="{{ route('statistik') }}"
+                                class="nav-link {{ request()->routeIs('statistik') ? 'active' : '' }}">
 
-                            <li class="nav-item">
-                                <a href="{{ url('/statistik') }}"
-                                    class="nav-link text-white">
-                                    <i class="far fa-circle nav-icon"></i>
-                                    <span>Statistik Kehadiran</span>
-                                </a>
-                            </li>
+                                <i class="nav-icon far fa-circle"></i>
 
-                            <li class="nav-item">
-                                <a href="{{ url('/kalender') }}"
-                                    class="nav-link text-white">
-                                    <i class="far fa-circle nav-icon"></i>
-                                    <span>Kalender</span>
-                                </a>
-                            </li>
+                                <p>Statistik Kehadiran</p>
 
-                        </ul>
+                            </a>
+                        </li>
 
-                    </div>
+                        {{-- KALENDER --}}
+                        <li class="nav-item">
+                            <a href="{{ route('kalender') }}"
+                                class="nav-link {{ request()->routeIs('kalender') ? 'active' : '' }}">
+
+                                <i class="nav-icon far fa-circle"></i>
+
+                                <p>Kalender</p>
+
+                            </a>
+                        </li>
+
+                    </ul>
 
                 </li>
 
@@ -105,6 +104,22 @@
 
                         <p>
                             Profil
+                        </p>
+
+                    </a>
+
+                </li>
+
+                {{-- DATA SISWA --}}
+                <li class="nav-item">
+
+                    <a href="{{ route('users.index') }}"
+                       class="nav-link {{ request()->routeIs('users.*') ? 'active' : '' }}">
+
+                        <i class="nav-icon bi bi-people -fill"></i>
+
+                        <p>
+                            Data Siswa
                         </p>
 
                     </a>
