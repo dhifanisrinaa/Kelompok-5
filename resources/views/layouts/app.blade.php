@@ -9,7 +9,7 @@
           content="width=device-width, initial-scale=1">
 
     <title>
-        @yield('title', 'Absensi Siswa')
+        @yield('title', 'AbsenSis')
     </title>
 
 
